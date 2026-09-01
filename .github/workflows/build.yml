@@ -21,7 +21,7 @@ jobs:
         run: |
           sudo apt update
           sudo apt install -y git zip unzip openjdk-17-jdk python3-pip autoconf libtool pkg-config zlib1g-dev libncurses-dev libffi-dev libssl-dev cmake
-          pip install --upgrade buildozer cython
+          pip install buildozer "cython<3"
 
       - name: Build with Buildozer
         run: buildozer android debug
